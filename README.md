@@ -1,0 +1,2 @@
+# shopify_fagacrombie_transitional_theme
+transitional theme
