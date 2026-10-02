@@ -10,9 +10,19 @@ so it stays invisible on fagacrombie.com (`onlineStoreUrl` is null).
 
 When creating any product draft:
 
-1. Right after `productCreate`, run `publishablePublish` to the **Online Store**
-   publication (`gid://shopify/Publication/140140511345`). A draft product stays
-   hidden from customers even when published to a channel, so this is safe.
+1. Right after `productCreate`, run `publishablePublish` to the channels below.
+   A draft product stays hidden from customers even when published to a
+   channel, so this is safe.
+
+   | Item | Channels |
+   |---|---|
+   | In stock (default for new listings) | All 8: Online Store `140140511345`, Point of Sale `140140544113`, Shop `140140576881`, Facebook & Instagram `140148899953`, Google & YouTube `161730166897`, Pinterest `161799569521`, faghydro `172299255921`, Fagacrombie Headless `172333138033` |
+   | Sold, kept as archive record | Online Store, faghydro, Fagacrombie Headless only |
+
+   IDs are `gid://shopify/Publication/<id>`. The Shopify connector refuses
+   `publishableUnpublish`, so when an item sells, removing it from Point of
+   Sale, Shop, Facebook & Instagram, Google & YouTube and Pinterest must be
+   done by the user in Shopify admin.
 2. After the user approves and the product is set to Active, read it back and
    confirm `onlineStoreUrl` is set and `resourcePublicationsV2` shows Online Store
    as published. Do not report a listing as live until this check passes.
