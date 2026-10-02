@@ -19,3 +19,24 @@ When creating any product draft:
 
 The fagacrombie-product-publisher `publish` step already publishes to the
 channel; this rule covers any listing created outside that script.
+
+## Listing format (agreed 2026-10-02, Hollister hoodie is the reference)
+
+| Field | Rule | Example |
+|---|---|---|
+| `custom.brand` | Brand only, no stray spaces | Hollister |
+| `fagacrombie.item_name` | Detail/color · garment, never the brand | Cream · Surf Open Fleece Hoodie |
+| Shopify title | Same as item_name, so the brand is never printed twice | Cream · Surf Open Fleece Hoodie |
+| SEO title | Brand + garment + key detail + size | Hollister Cream Fleece Hoodie, Surf Open Embroidery, Size M |
+| `fagacrombie.size_label` | Tagged size only, no fit text | M |
+| `fagacrombie.fits_like` | Exactly `Fits like Medium` style, only when measurements support it | Fits like Medium |
+| Measurements | **Inches only**, in `fagacrombie.*_in`, plus `measurement_method`. Never write inches into `*_cm` fields. | chest_in 22.5 |
+| Vendor | `Fagacrombie` | |
+
+Do not add final-sale wording to listings: the theme prints
+"Pre-owned/vintage, final sale" and "All sales final" on every product page.
+
+The inch display and item-name heading come from the publisher theme patch,
+installed on the unpublished theme "Transitional + inches (review)"
+(`gid://shopify/OnlineStoreTheme/188847161457`). Until that theme is published,
+the live theme only renders `*_cm` fields and `product.title`.
