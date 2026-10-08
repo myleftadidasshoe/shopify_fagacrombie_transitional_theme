@@ -61,6 +61,7 @@ choices and the matching collection rule extended together. The Shop menu
 | Shopify title | Same as item_name, so the brand is never printed twice | Cream · Surf Open Fleece Hoodie |
 | SEO title | Brand + garment + key detail + size | Hollister Cream Fleece Hoodie, Surf Open Embroidery, Size M |
 | `fagacrombie.size_label` | Tagged size only, no fit text | M |
+| `fagacrombie.era_decade` | Only when the user or the listing states it (a dated collection counts: "2012 collection" is 2010s). Unknown stays blank, never guessed; the card then reads "M · Fits like Medium" | 1990s |
 | `fagacrombie.fits_like` | Exactly `Fits like Medium` style, only when measurements support it | Fits like Medium |
 | Measurements | **Inches only**, in `fagacrombie.*_in`, plus `measurement_method`. Never write inches into `*_cm` fields. | chest_in 22.5 |
 | Vendor | `Fagacrombie` | |
