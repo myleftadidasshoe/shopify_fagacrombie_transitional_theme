@@ -44,6 +44,16 @@ Add every new listing to the one that fits, alongside any narrower collection:
 
 "All" is a smart collection (vendor = Fagacrombie) and fills itself.
 
+Every listing also sets `fagacrombie.style`, which drives the Style filter on
+collection pages. The definition only accepts these values:
+
+| Collection | Styles |
+|---|---|
+| Outerwear | Jacket, Coat, Blazer, Vest |
+| Tops | Tee, Long Sleeve, Shirt, Polo, Tank, Sweater (cardigans too), Sweatshirt, Hoodie |
+| Bottoms | Trousers, Jeans, Shorts, Sweatpants |
+| Shoes & Accessories | Shoes, Eyewear, Bags & Wallets, Belt, Headwear |
+
 ## Listing format (agreed 2026-10-02, Hollister hoodie is the reference)
 
 | Field | Rule | Example |
