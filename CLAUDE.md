@@ -30,29 +30,27 @@ When creating any product draft:
 The fagacrombie-product-publisher `publish` step already publishes to the
 channel; this rule covers any listing created outside that script.
 
-## Collections: match the Shop menu
+## Collections: set the Style, collections fill themselves
 
-The Shop menu (menu `main-menu-categories`) links four category collections.
-Add every new listing to the one that fits, alongside any narrower collection:
+Every listing sets `fagacrombie.style`. The category collections are automatic
+(rules on that field), so the Style alone places a piece in the Shop menu and in
+the Style filter. Do not add products to these collections by hand.
 
-| Garment | Collection |
+| Style | Collections it lands in |
 |---|---|
-| Jackets, coats, vests, bombers | Outerwear `gid://shopify/Collection/308740915313` |
-| Tops, sweaters, tees, shirts, tanks | Tops `gid://shopify/Collection/307870072945` (tees also Tees, shirts also Shirts, tanks also Tanks) |
-| Trousers, shorts, skirts | Bottoms `gid://shopify/Collection/294767263857` |
-| Shoes, bags, belts, jewellery, hats | Shoes & Accessories `gid://shopify/Collection/512371556465` (also Shoes or Accessories) |
+| Jacket, Coat, Blazer, Vest | Outerwear |
+| Tee | Tops, Tees |
+| Shirt | Tops, Shirts |
+| Tank | Tops, Tanks |
+| Long Sleeve, Polo, Sweater (cardigans too), Sweatshirt, Hoodie | Tops |
+| Trousers, Jeans, Shorts, Sweatpants | Bottoms |
+| Shoes | Shoes & Accessories, Shoes |
+| Eyewear, Bags & Wallets, Belt, Headwear | Shoes & Accessories, Accessories |
 
+The field only accepts the values above; a new style needs the definition's
+choices and the matching collection rule extended together. The Shop menu
+(`main-menu-categories`) links Outerwear, Tops, Bottoms and Shoes & Accessories.
 "All" is a smart collection (vendor = Fagacrombie) and fills itself.
-
-Every listing also sets `fagacrombie.style`, which drives the Style filter on
-collection pages. The definition only accepts these values:
-
-| Collection | Styles |
-|---|---|
-| Outerwear | Jacket, Coat, Blazer, Vest |
-| Tops | Tee, Long Sleeve, Shirt, Polo, Tank, Sweater (cardigans too), Sweatshirt, Hoodie |
-| Bottoms | Trousers, Jeans, Shorts, Sweatpants |
-| Shoes & Accessories | Shoes, Eyewear, Bags & Wallets, Belt, Headwear |
 
 ## Listing format (agreed 2026-10-02, Hollister hoodie is the reference)
 
@@ -70,7 +68,6 @@ collection pages. The definition only accepts these values:
 Do not add final-sale wording to listings: the theme prints
 "Pre-owned/vintage, final sale" and "All sales final" on every product page.
 
-The inch display and item-name heading come from the publisher theme patch,
-installed on the unpublished theme "Transitional + inches (review)"
-(`gid://shopify/OnlineStoreTheme/188847161457`). Until that theme is published,
-the live theme only renders `*_cm` fields and `product.title`.
+The live theme (a "Transitional (inches)" copy) renders inches, the item-name
+heading and the Fits like line. Theme files can only be edited on an unpublished
+copy: duplicate the live theme, edit the copy, and the user publishes it.
