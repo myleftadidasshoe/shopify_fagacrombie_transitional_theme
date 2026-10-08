@@ -30,6 +30,20 @@ When creating any product draft:
 The fagacrombie-product-publisher `publish` step already publishes to the
 channel; this rule covers any listing created outside that script.
 
+## Collections: match the Shop menu
+
+The Shop menu (menu `main-menu-categories`) links four category collections.
+Add every new listing to the one that fits, alongside any narrower collection:
+
+| Garment | Collection |
+|---|---|
+| Jackets, coats, vests, bombers | Outerwear `gid://shopify/Collection/308740915313` |
+| Tops, sweaters, tees, shirts, tanks | Tops `gid://shopify/Collection/307870072945` (tees also Tees, shirts also Shirts, tanks also Tanks) |
+| Trousers, shorts, skirts | Bottoms `gid://shopify/Collection/294767263857` |
+| Shoes, bags, belts, jewellery, hats | Shoes & Accessories `gid://shopify/Collection/512371556465` (also Shoes or Accessories) |
+
+"All" is a smart collection (vendor = Fagacrombie) and fills itself.
+
 ## Listing format (agreed 2026-10-02, Hollister hoodie is the reference)
 
 | Field | Rule | Example |
